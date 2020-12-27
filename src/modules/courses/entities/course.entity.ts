@@ -22,6 +22,8 @@ export class Course {
 
   @Column()
   school: string;
+  @Column()
+  external_link: string;
 
   @CreateDateColumn()
   created_at: string;

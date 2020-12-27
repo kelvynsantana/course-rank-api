@@ -65,7 +65,7 @@ export class CoursesService {
       course_id,
     );
     if (courseLiked) {
-      throw new HttpException('Course does liked', 400);
+      throw new HttpException('Course already liked', 400);
     }
 
     const like = await this.likeRepository.likeCourse(user_id, course_id);

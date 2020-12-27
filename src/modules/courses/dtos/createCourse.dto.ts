@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, MinLength } from 'class-validator';
+import { IsNotEmpty, IsString, IsUrl, MinLength } from 'class-validator';
 
 export class CreateCourseDTO {
   @IsNotEmpty()
@@ -19,4 +19,8 @@ export class CreateCourseDTO {
   @IsNotEmpty()
   @MinLength(3)
   school: string;
+
+  @IsUrl()
+  @IsNotEmpty()
+  external_link: string;
 }

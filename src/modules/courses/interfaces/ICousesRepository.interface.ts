@@ -1,5 +1,5 @@
-import { CreateCourseDTO } from '../courses/dtos/createCourse.dto';
-import { Course } from '../courses/entities/course.entity';
+import { CreateCourseDTO } from '../dtos/createCourse.dto';
+import { Course } from '../entities/course.entity';
 
 export interface ICoursesRepository {
   findByTitle(title: string): Promise<Course | undefined>;

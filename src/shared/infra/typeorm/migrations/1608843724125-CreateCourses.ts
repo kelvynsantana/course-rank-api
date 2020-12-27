@@ -22,11 +22,6 @@ export default class CreateCourses1608843724125 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'likes',
-            type: 'int',
-            default: 0,
-          },
-          {
             name: 'price',
             type: 'varchar',
           },

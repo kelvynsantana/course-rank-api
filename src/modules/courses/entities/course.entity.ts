@@ -18,9 +18,6 @@ export class Course {
   description: string;
 
   @Column()
-  likes: number;
-
-  @Column()
   price: string;
 
   @Column()

@@ -16,10 +16,10 @@ export class CreateLoginService {
   }: ICreateLogin): Promise<ICreateJWTResponse> {
     const payload = {
       email,
+      id,
       sub: id,
       name,
     };
-
     return {
       id,
       email,

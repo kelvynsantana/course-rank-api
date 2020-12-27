@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ICoursesRepository } from 'src/modules/interfaces/ICousesRepository.interface';
+import { ICoursesRepository } from 'src/modules/courses/interfaces/ICousesRepository.interface';
 import { Repository } from 'typeorm';
 import { CreateCourseDTO } from '../dtos/createCourse.dto';
 import { Course } from '../entities/course.entity';
@@ -30,15 +30,15 @@ export class CoursesRepository implements ICoursesRepository {
     return course;
   }
 
-  async findAndOrderCoursesByLikes(): Promise<Course[]> {
-    const courses = await this.courseRepository.find({
-      order: {
-        likes: 'DESC',
-      },
-    });
+  // async findAndOrderCoursesByLikes(): Promise<Course[]> {
+  //   const courses = await this.courseRepository.find({
+  //     order: {
+  //       likes: 'DESC',
+  //     },
+  //   });
 
-    return courses;
-  }
+  //   return courses;
+  // }
   async create(newCourse: CreateCourseDTO): Promise<Course> {
     const course = await this.courseRepository.create(newCourse);
 
